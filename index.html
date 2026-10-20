@@ -4,20 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="เว็บไซต์แนะนำตัวและผลงานของฉัน">
-  <title>Portfolio | ชื่อของคุณ</title>
+  <meta name="description" content="เว็บไซต์แนะนำตัวของ สิทธิพันธ์ พานทอง">
+  <title>ICE | My Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
-
-    :root {
-      --bg: #0b1020;
-      --card: #151d32;
-      --primary: #818cf8;
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -30,14 +24,14 @@
 
     body {
       font-family: 'Prompt', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      color: #f1f5f9;
+      background: #070b16;
       line-height: 1.8;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
@@ -45,50 +39,51 @@
       margin: auto;
     }
 
-    /* เมนูด้านบน */
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(11, 16, 32, 0.94);
-      border-bottom: 1px solid #27314a;
+      background: rgba(7, 11, 22, .92);
+      border-bottom: 1px solid #1e293b;
       backdrop-filter: blur(12px);
     }
 
     nav {
       min-height: 72px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
     .logo {
-      color: var(--primary);
+      color: #38bdf8;
+      font-size: 1.4rem;
       font-weight: 700;
-      font-size: 1.3rem;
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
       gap: 22px;
       list-style: none;
-      font-size: 0.9rem;
-      color: var(--muted);
+      color: #cbd5e1;
+      font-size: .9rem;
     }
 
     .nav-links a:hover {
-      color: var(--primary);
+      color: #38bdf8;
     }
 
-    /* ส่วนแนะนำตัว */
+    /* Hero */
     .hero {
-      min-height: 78vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
-      gap: 60px;
-      padding-top: 65px;
-      padding-bottom: 65px;
+      justify-content: space-between;
+      gap: 55px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
     .hero-text {
@@ -97,28 +92,30 @@
 
     .tag {
       display: inline-block;
-      color: #c7d2fe;
-      background: #20294a;
       padding: 6px 15px;
-      border-radius: 30px;
       margin-bottom: 20px;
-      font-size: 0.9rem;
+      border: 1px solid #075985;
+      border-radius: 30px;
+      color: #7dd3fc;
+      background: #082f49;
+      font-size: .85rem;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.3;
-      margin-bottom: 18px;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.4;
+      margin-bottom: 15px;
     }
 
     h1 span {
-      color: var(--primary);
+      color: #38bdf8;
+      text-shadow: 0 0 25px #0ea5e955;
     }
 
     .hero-text p {
-      color: var(--muted);
+      color: #94a3b8;
+      margin-bottom: 25px;
       max-width: 550px;
-      margin-bottom: 28px;
     }
 
     .buttons {
@@ -129,36 +126,48 @@
 
     .btn {
       display: inline-block;
-      padding: 11px 23px;
+      padding: 10px 22px;
       border-radius: 10px;
       font-weight: 500;
-      transition: 0.25s;
+      transition: .25s;
     }
 
     .btn-primary {
-      color: #0b1020;
-      background: var(--primary);
+      color: #07111f;
+      background: #38bdf8;
     }
 
     .btn-outline {
-      border: 1px solid #64748b;
+      border: 1px solid #38bdf8;
+      color: #7dd3fc;
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      opacity: 0.9;
+      box-shadow: 0 8px 25px #0ea5e933;
     }
 
-    .profile {
-      width: 300px;
-      height: 350px;
+    .photo-frame {
+      width: 310px;
+      height: 400px;
+      flex-shrink: 0;
+      padding: 5px;
+      border-radius: 24px;
+      border: 2px solid #38bdf8;
+      background: linear-gradient(145deg, #0c4a6e, #172554, #020617);
+      box-shadow: 0 0 45px #0284c733;
+      overflow: hidden;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border-radius: 28px;
-      border: 3px solid #818cf8;
-      box-shadow: 0 0 55px #818cf830;
+      object-position: center top;
+      border-radius: 18px;
     }
 
-    /* หัวข้อแต่ละส่วน */
+    /* Sections */
     section {
       padding: 75px 0;
       scroll-margin-top: 75px;
@@ -174,11 +183,14 @@
       margin-bottom: 8px;
     }
 
-    .section-title p {
-      color: var(--muted);
+    .section-title h2 span {
+      color: #38bdf8;
     }
 
-    /* การ์ดข้อมูล */
+    .section-title p {
+      color: #94a3b8;
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -186,76 +198,122 @@
     }
 
     .card {
-      padding: 27px;
-      background: var(--card);
-      border: 1px solid #27314a;
+      background: #0f172a;
+      border: 1px solid #1e3a5f;
       border-radius: 18px;
-      transition: 0.25s;
+      padding: 25px;
+      transition: .25s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      border-color: var(--primary);
+      border-color: #38bdf8;
     }
 
     .card .icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
     .card h3 {
-      color: #c7d2fe;
+      color: #7dd3fc;
       margin-bottom: 10px;
     }
 
     .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
+      color: #cbd5e1;
+      font-size: .95rem;
       overflow-wrap: anywhere;
     }
 
-    /* ทักษะ */
-    .skills {
+    /* Music */
+    .music-box {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      padding: 35px 25px;
+      border-radius: 20px;
+      border: 1px solid #1e3a5f;
+      background: linear-gradient(145deg, #0f172a, #082f49);
+    }
+
+    .music-icon {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .music-box p {
+      color: #cbd5e1;
+      margin: 10px 0 20px;
+    }
+
+    .music-bars {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      align-items: center;
+      gap: 5px;
+      height: 40px;
+      margin-bottom: 15px;
     }
 
-    .skill {
-      background: #20294a;
-      color: #c7d2fe;
-      border: 1px solid #39456b;
-      border-radius: 30px;
-      padding: 9px 20px;
+    .music-bars span {
+      width: 5px;
+      height: 15px;
+      border-radius: 5px;
+      background: #38bdf8;
+      animation: equalize .7s ease-in-out infinite alternate;
     }
 
-    /* ติดต่อ */
-    .contact {
+    .music-bars span:nth-child(2n) {
+      animation-delay: .3s;
+    }
+
+    .music-bars span:nth-child(3n) {
+      animation-delay: .5s;
+    }
+
+    @keyframes equalize {
+      to { height: 35px; }
+    }
+
+    .music-bars span {
+      animation-play-state: paused;
+    }
+
+    .music-box:hover .music-bars span {
+      animation-play-state: running;
+    }
+
+    /* Contact */
+    .contact-box {
       text-align: center;
-      background: #11182b;
-      border-radius: 25px;
       padding: 45px 20px;
+      border-radius: 22px;
+      background: #0f172a;
+      border: 1px solid #1e3a5f;
     }
 
-    .contact p {
-      color: var(--muted);
+    .contact-box p {
+      color: #94a3b8;
       margin: 12px 0 25px;
     }
 
     footer {
       padding: 25px 0;
       text-align: center;
-      color: #94a3b8;
-      font-size: 0.85rem;
-      border-top: 1px solid #27314a;
+      color: #64748b;
+      border-top: 1px solid #1e293b;
+      font-size: .85rem;
     }
 
-    /* รองรับหน้าจอมือถือ */
     @media (max-width: 760px) {
       .nav-links {
         gap: 12px;
-        font-size: 0.8rem;
+        font-size: .75rem;
+      }
+
+      .logo {
+        font-size: 1.1rem;
       }
 
       .hero {
@@ -275,9 +333,9 @@
         justify-content: center;
       }
 
-      .profile {
-        width: 220px;
-        height: 250px;
+      .photo-frame {
+        width: 240px;
+        height: 310px;
       }
 
       .cards {
@@ -291,12 +349,12 @@
 
     @media (max-width: 380px) {
       .nav-links {
-        gap: 8px;
-        font-size: 0.72rem;
+        gap: 7px;
+        font-size: .68rem;
       }
 
       .logo {
-        font-size: 1rem;
+        font-size: .95rem;
       }
     }
   </style>
@@ -304,109 +362,133 @@
 
 <body>
 
-  <!-- เมนู -->
   <header>
     <nav class="container">
-      <a href="#home" class="logo">MY PORTFOLIO.</a>
+      <a href="#home" class="logo">ICE.</a>
 
       <ul class="nav-links">
         <li><a href="#home">หน้าหลัก</a></li>
         <li><a href="#about">เกี่ยวกับฉัน</a></li>
-        <li><a href="#skills">ทักษะ</a></li>
+        <li><a href="#music">ดนตรี</a></li>
         <li><a href="#contact">ติดต่อ</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- ส่วนแนะนำตัว -->
+    <!-- แนะนำตัว -->
     <section class="hero container" id="home">
       <div class="hero-text">
-        <span class="tag">👋 ยินดีต้อนรับสู่เว็บไซต์ของฉัน</span>
+        <span class="tag">👋 HELLO, WELCOME TO MY WORLD</span>
 
         <h1>
           สวัสดีครับ<br>
-          ผมชื่อ <span>[นาย สิทธิพันธ์ พานทอง]</span>
+          ผมชื่อ <span>สิทธิพันธ์ พานทอง</span>
         </h1>
 
         <p>
-          ผมเป็นนักศึกษาจาก [วิทยาลัยเทคนิคนางรอง]
-          ชอบเรียนรู้สิ่งใหม่ ๆ สนใจเทคโนโลยี และมุ่งมั่นพัฒนาตัวเองอยู่เสมอ
+          ชื่อเล่น ไอซ์ (ICE) นักศึกษาระดับ ปวส.2
+          วิทยาลัยเทคนิคนางรอง
+          เป็นคนที่ชื่นชอบดนตรีและเสียงเพลง
+          เพราะเสียงเพลงเป็นส่วนหนึ่งที่ทำให้ทุกวันมีความหมาย
         </p>
 
         <div class="buttons">
           <a href="#about" class="btn btn-primary">
-            รู้จักฉันมากขึ้น ↗
+            รู้จักผมมากขึ้น ↗
           </a>
 
-          <a href="#contact" class="btn btn-outline">
-            ติดต่อฉัน
+          <a href="#music" class="btn btn-outline">
+            🎵 สิ่งที่ชอบ
           </a>
         </div>
       </div>
 
-      <!-- เปลี่ยน URL นี้เป็นรูปของตัวเอง -->
-      <img
-        class="profile"
-        src="https://placehold.co/600x700/20294a/ffffff?text=Your+Photo"
-        alt="รูปโปรไฟล์ของฉัน"
-      >
+      <!-- ใส่รูป Rin Itoshi ในโฟลเดอร์ images -->
+      <div class="photo-frame">
+        <img
+          src="images/rin.jpg"
+          alt="Rin Itoshi จาก Blue Lock"
+          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(145deg,#075985,#172554,#020617)';"
+        >
+      </div>
     </section>
 
     <!-- เกี่ยวกับฉัน -->
     <section id="about">
       <div class="container">
         <div class="section-title">
-          <h2>เกี่ยวกับฉัน</h2>
-          <p>ข้อมูลส่วนตัวและสิ่งที่ฉันสนใจ</p>
+          <h2>เกี่ยวกับ<span>ผม</span></h2>
+          <p>มาทำความรู้จักกับไอซ์กันครับ</p>
         </div>
 
         <div class="cards">
           <article class="card">
+            <div class="icon">👤</div>
+            <h3>ข้อมูลส่วนตัว</h3>
+            <p>
+              ชื่อ: นาย สิทธิพันธ์ พานทอง<br>
+              ชื่อเล่น: ไอซ์<br>
+              ชื่อภาษาอังกฤษ: Sittiphan Panthong
+            </p>
+          </article>
+
+          <article class="card">
             <div class="icon">🎓</div>
             <h3>ประวัติการศึกษา</h3>
             <p>
-              สถานศึกษา: [วิทยาลัยเทคนิคนางรอง]<br>
-              ระดับชั้น: [ปวส.2]<br>
-              สาขา: [เทคโนโลยีสารสนเทศ]
+              สถานศึกษา: วิทยาลัยเทคนิคนางรอง<br>
+              ระดับการศึกษา: ประกาศนียบัตรวิชาชีพชั้นสูง<br>
+              ชั้นปี: ปวส.2
             </p>
           </article>
 
           <article class="card">
-            <div class="icon">💡</div>
-            <h3>ความสนใจ</h3>
+            <div class="icon">⚽</div>
+            <h3>ตัวละครที่ชอบ</h3>
             <p>
-              ฉันสนใจ [เทคโนโลยี/การออกแบบ/กีฬา/ดนตรี]
-              และชอบค้นคว้าความรู้ใหม่ ๆ เพื่อนำมาพัฒนาตัวเอง
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🎯</div>
-            <h3>เป้าหมายของฉัน</h3>
-            <p>
-              ฉันต้องการพัฒนาความสามารถด้าน [สิ่งที่สนใจ]
-              เพื่อสร้างผลงานที่มีคุณค่าในอนาคต
+              ริน อิโตชิ (Rin Itoshi)<br>
+              ตัวละครจากอนิเมะ Blue Lock
+              ที่มีบุคลิกสุขุม มุ่งมั่น และจริงจัง
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ทักษะ -->
-    <section id="skills">
+    <!-- ดนตรี -->
+    <section id="music">
       <div class="container">
         <div class="section-title">
-          <h2>ทักษะและความสามารถ</h2>
-          <p>สิ่งที่ฉันกำลังเรียนรู้และพัฒนา</p>
+          <h2>สิ่งที่ผม<span>ชอบ</span></h2>
+          <p>ดนตรีและเสียงเพลง 🎧</p>
         </div>
 
-        <div class="skills">
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">การทำงานเป็นทีม</span>
-          <span class="skill">การสื่อสาร</span>
-          <span class="skill">ความคิดสร้างสรรค์</span>
+        <div class="music-box">
+          <div class="music-icon">🎵</div>
+
+          <div class="music-bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+
+          <h3>Music Is My Happiness</h3>
+
+          <p>
+            ผมชอบฟังดนตรีและเสียงเพลง
+            เพราะเพลงช่วยสร้างอารมณ์ ความรู้สึก
+            และทำให้ช่วงเวลาธรรมดากลายเป็นช่วงเวลาพิเศษ
+          </p>
+
+          <a
+            href="https://www.youtube.com/"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ▶ ฟังเพลงบน YouTube
+          </a>
         </div>
       </div>
     </section>
@@ -414,28 +496,26 @@
     <!-- ติดต่อ -->
     <section id="contact">
       <div class="container">
-        <div class="contact">
-          <h2>มาทำความรู้จักกัน!</h2>
+        <div class="contact-box">
+          <h2>ขอบคุณที่เข้ามาเยี่ยมชม 💙</h2>
+
           <p>
-            สามารถติดต่อฉันผ่านอีเมล หรือดูผลงานเพิ่มเติมได้ที่ GitHub
+            นี่คือพื้นที่เล็ก ๆ ที่ใช้บอกเล่าเรื่องราวของผม
+            นาย สิทธิพันธ์ พานทอง (ไอซ์)
           </p>
 
-          <!-- แก้ไขอีเมลและลิงก์ด้านล่าง -->
           <div class="buttons" style="justify-content:center">
             <a
-              class="btn btn-primary"
-              href="mailto:your-email@example.com"
-            >
-              ✉️ ส่งอีเมล
-            </a>
-
-            <a
-              class="btn btn-outline"
               href="https://github.com/your-username"
+              class="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              💻 GitHub
+              💻 GitHub ของผม
+            </a>
+
+            <a href="#home" class="btn btn-outline">
+              ↑ กลับด้านบน
             </a>
           </div>
         </div>
@@ -445,9 +525,9 @@
 
   <footer>
     <p>
-      © <span id="year"></span> [ชื่อของคุณ]
-      | สร้างด้วย HTML & CSS 💜
+      © <span id="year"></span> Sittiphan Panthong (ICE)
     </p>
+    <p>Made with 💙 HTML & CSS</p>
   </footer>
 
   <script>
@@ -457,4 +537,3 @@
 
 </body>
 </html>
-
